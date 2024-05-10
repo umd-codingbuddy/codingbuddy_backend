@@ -1,5 +1,7 @@
 package com.codingbuddy.services.user;
 
+import com.codingbuddy.dto.user.UpdateUser;
+import com.codingbuddy.models.user.Role;
 import com.codingbuddy.repository.user.InstructorRepository;
 import com.codingbuddy.repository.user.StudentRepository;
 import com.codingbuddy.models.user.Instructor;
@@ -24,6 +26,30 @@ public class UserService {
     private final UserRepository userRepository;
     private final StudentRepository studentRepository;
     private final InstructorRepository instructorRepository;
+
+    public ResponseEntity<Object> updateUser(String userEmail, UpdateUser userDetails){
+        try{
+            User user = userRepository.findByEmail(userEmail)
+                    .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+            user.setAddress(userDetails.getAddress());
+            user.setBio(userDetails.getBio());
+            user.setFirstName(userDetails.getFirstName());
+            user.setLastName(userDetails.getLastName());
+            userRepository.save(user);
+
+            if(user.getRole() == Role.STUDENT){
+                Student student = studentRepository.findByUser(user);
+                student.setGithub(userDetails.getGithub());
+                student.setLinkedin(userDetails.getLinkedin());
+                studentRepository.save(student);
+            }
+
+            return ResponseEntity.ok().body(Map.of("status", 1));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("status", 1, "errorMsg", e.getMessage()));
+        }
+    }
 
     public Map<String, Object> getAllUsers() {
         Map<String, Object> response = new HashMap<>();

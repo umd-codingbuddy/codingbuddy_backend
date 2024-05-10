@@ -1,0 +1,17 @@
+// Contact
+-> Get course instructor (done)
+-> Update user (done)
+-> Get instructor courses (done)
+-> Send message (done)
+-> Get user courses (student or instructor) (done)
+-> Get all courses (done)
+-> get contact messages
+-> get current page content (done)
+-> complete page (done)
+-> get next page (get the page from page id) (done)
+
+// create an api
+
+
+-> Execute Coding
+

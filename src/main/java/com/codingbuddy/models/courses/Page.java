@@ -33,6 +33,4 @@ public class Page {
     private DifficultyLevel difficultyLevel;
 
     private Boolean hintAllowed;
-
-
 }

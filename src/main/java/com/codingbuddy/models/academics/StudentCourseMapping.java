@@ -36,5 +36,7 @@ public class StudentCourseMapping {
 
     private Long completionPercentage;
 
-    private Long currentModuleId;
+    private int currentModuleId;
+
+    private int currentPageId;
 }

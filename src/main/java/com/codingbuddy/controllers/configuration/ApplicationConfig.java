@@ -1,4 +1,4 @@
-package com.codingbuddy.configuration;
+package com.codingbuddy.controllers.configuration;
 
 import com.codingbuddy.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;

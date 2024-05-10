@@ -12,6 +12,10 @@ public interface PageRepository extends JpaRepository<Page, Integer> {
     Page findByPageId(int pageId);
     List<Page> findByModule(Module module);
 
-    @Query(value = "SELECT * from Page where module_module_id=1 ORDER BY sequence_number ASC", nativeQuery = true)
+    @Query(value = "SELECT * from Page where module_module_id=:moduleId ORDER BY sequence_number ASC", nativeQuery = true)
     List<Page> findByModuleIdSorted(int moduleId);
+
+    List<Page> findByModuleOrderBySequenceNumberAsc(Module module);
+
+    Page findByModuleAndSequenceNumber(Module module, Long sequenceNumber);
 }

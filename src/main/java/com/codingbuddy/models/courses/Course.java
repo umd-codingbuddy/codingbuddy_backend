@@ -1,6 +1,7 @@
 package com.codingbuddy.models.courses;
 
 import com.codingbuddy.models.user.Instructor;
+import com.codingbuddy.models.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,17 +24,15 @@ public class Course {
     @Column(unique = true, length = 1000, nullable = false)
     private String name;
 
-    @Column(unique = true, length = 1000)
+    @Column(length = 1000)
     private String description;
 
     @Enumerated(EnumType.STRING)
     private DifficultyLevel difficultyLevel;
 
-    @OneToMany
+    @ManyToMany
     private List<Tag> tags;
 
-    @OneToMany
-    private List<Instructor> instructors;
-
-
+    @ManyToOne
+    private User instructor;
 }

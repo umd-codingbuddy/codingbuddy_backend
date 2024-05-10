@@ -1,4 +1,4 @@
-package com.codingbuddy.configuration;
+package com.codingbuddy.controllers.configuration;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

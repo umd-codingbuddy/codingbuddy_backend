@@ -1,7 +1,6 @@
 package com.codingbuddy.models.academics;
 
 import com.codingbuddy.models.courses.*;
-import com8.codingbuddy.models.courses.*;
 import com.codingbuddy.models.courses.Module;
 import com.codingbuddy.models.user.Student;
 import jakarta.persistence.*;

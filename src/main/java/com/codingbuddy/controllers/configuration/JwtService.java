@@ -1,4 +1,4 @@
-package com.codingbuddy.configuration;
+package com.codingbuddy.controllers.configuration;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

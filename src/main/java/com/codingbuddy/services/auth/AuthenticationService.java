@@ -5,7 +5,7 @@ import com.codingbuddy.repository.user.StudentRepository;
 import com.codingbuddy.dto.auth.AuthenticationRequest;
 import com.codingbuddy.dto.auth.AuthenticationResponse;
 import com.codingbuddy.dto.user.RegisterRequest;
-import com.codingbuddy.configuration.JwtService;
+import com.codingbuddy.controllers.configuration.JwtService;
 import com.codingbuddy.repository.user.UserRepository;
 import com.codingbuddy.models.user.Instructor;
 import com.codingbuddy.models.user.Role;
@@ -74,7 +74,6 @@ public class AuthenticationService {
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("status", 2, "errorMsg", "User already exists"));
         } catch (Exception e) {
-
             // Return failure response with error message
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("status", 2, "errorMsg", e.getMessage()));
         }

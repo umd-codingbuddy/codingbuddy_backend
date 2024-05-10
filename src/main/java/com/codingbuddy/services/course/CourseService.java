@@ -187,6 +187,7 @@ public class CourseService {
                         .description(course.getDescription())
                         .name(course.getName())
                         .tags(course.getTags())
+                        .difficultyLevel(course.getDifficultyLevel())
                         .build();
 
                 List<Module> modules = moduleRepository.findByCourse(course);

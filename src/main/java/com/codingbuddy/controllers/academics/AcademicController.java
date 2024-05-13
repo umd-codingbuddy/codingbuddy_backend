@@ -1,6 +1,7 @@
 package com.codingbuddy.controllers.academics;
 
 import com.codingbuddy.dto.academics.AddStudentToCourse;
+import com.codingbuddy.dto.academics.CalculateScore;
 import com.codingbuddy.dto.academics.ExecuteCode;
 import com.codingbuddy.dto.academics.PageContentDto;
 import com.codingbuddy.services.academics.AcademicService;
@@ -59,8 +60,19 @@ public class AcademicController {
         return academicService.completePageReq(userEmail, pageId);
     }
 
-//    @PostMapping("/executecode")
-//    public ResponseEntity<Object> executeCode(@RequestBody ExecuteCode codeDetails){
-//        return academicService.executeCode(codeDetails);
-//    }
+    @PostMapping("/executecode")
+    public ResponseEntity<Object> executeCode(@RequestBody ExecuteCode codeDetails){
+        return academicService.executeCode(codeDetails);
+    }
+
+    @PostMapping("/calculateScore")
+    public ResponseEntity<Object> calculateScore(HttpServletRequest request, @RequestBody CalculateScore scoreDetails){
+        String userEmail = request.getUserPrincipal().getName();
+        return academicService.calculateScore(userEmail, scoreDetails);
+    }
+
+    @GetMapping("/getstatements/{courseId}")
+    public ResponseEntity<Object> getStatements(@PathVariable int courseId){
+        return academicService.getStatements(courseId);
+    }
 }

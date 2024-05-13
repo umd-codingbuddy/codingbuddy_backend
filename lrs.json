@@ -1,0 +1,21 @@
+{
+	"actor": {
+		"account": {
+			"homePage": "https://codingbuddy.com",
+			"name": "sachin@gmail.com"
+		}
+	},
+	"verb": {
+		"id": "http://adlnet.gov/expapi/verbs/completed"
+	},
+	"object": {
+		"id": "https://codingbuddy.com/course/1234"
+	},
+	"result": {
+		"score": {
+			"raw": 80
+		},
+		"duration": "PT10S"
+	},
+	"timestamp": "2024-05-09T12:34:56Z"
+}

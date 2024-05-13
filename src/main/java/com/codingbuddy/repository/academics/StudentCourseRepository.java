@@ -11,4 +11,5 @@ public interface StudentCourseRepository extends JpaRepository<StudentCourseMapp
     StudentCourseMapping findByStudentAndCourse(Student student, Course course);
     StudentCourseMapping findByStudentAndCurrentPageId(Student student, int currentPageId);
     List<StudentCourseMapping> findByStudent(Student student);
+    List<StudentCourseMapping> findByCourse(Course course);
 }

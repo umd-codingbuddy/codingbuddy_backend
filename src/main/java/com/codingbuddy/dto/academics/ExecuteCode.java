@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class ExecuteCode {
     private String code;
     private String language;
+    private int pageId;
 }

@@ -42,6 +42,7 @@ com\codingbuddy\dto\course\CreateModule.class
 com\codingbuddy\dto\course\CreateTag.class
 com\codingbuddy\models\courses\Tag.class
 com\codingbuddy\models\user\Instructor$InstructorBuilder.class
+com\codingbuddy\dto\academics\CalculateScore.class
 com\codingbuddy\dto\auth\AuthenticationRequest.class
 com\codingbuddy\dto\auth\AuthenticationResponse.class
 com\codingbuddy\controllers\Default.class
@@ -86,6 +87,7 @@ com\codingbuddy\dto\course\GetStudentCourses.class
 com\codingbuddy\models\courses\PageType.class
 com\codingbuddy\models\courses\DifficultyLevel.class
 com\codingbuddy\dto\course\GetAllCourses.class
+com\codingbuddy\dto\academics\CalculateScore$CalculateScoreBuilder.class
 com\codingbuddy\repository\contact\ContactRepository.class
 com\codingbuddy\dto\contact\GetAllMessages$GetAllMessagesBuilder.class
 com\codingbuddy\dto\academics\AddStudentToCourse.class

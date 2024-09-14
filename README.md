@@ -1,4 +1,4 @@
-Coding Buddy is a online learing platform for learning programming. 
+Coding Buddy is a online learning platform for learning programming. 
 
 This repository is the backend of the coding buddy application. 
 
